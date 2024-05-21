@@ -1,0 +1,347 @@
+
+
+
+
+
+
+
+<div class="wrapper">
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="fa fa-plus-square" aria-hidden="true"></i>
+        <span class="logo_name">Doctor C</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#">
+            <i class='bx bx-grid-alt'></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Dashboard</a></li>
+          </ul>
+        </li>
+   
+    
+
+   
+   
+    
+   
+
+ 
+      
+        <li>
+          <a routerLink="">
+            <i class="fa fa-users it-se" aria-hidden="true"></i>
+            <span class="link_name">Patients</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a routerLink="" class="link_name" href="#">Patients</a></li>
+          </ul>
+        </li>
+   
+        <li>
+          <a >
+            <i class="fa fa-calendar it-se" aria-hidden="true"></i>
+            <span class="link_name">Appointments</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a  class="link_name" href="#">Appointments</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a>
+            <i class="fa fa-file-text-o it-se" aria-hidden="true"></i>
+            <span class="link_name">Reports</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Reports</a></li>
+          </ul>
+        </li>
+
+
+
+        <li>
+          <a >
+            <i class="fa fa-envelope-o it-se" aria-hidden="true"></i>
+            <span class="link_name">Message</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Message</a></li>
+          </ul>
+        </li>
+
+
+
+        <li>
+          <a href="#">
+            <i class="fa fa-question-circle it-se" aria-hidden="true"></i>
+            <span class="link_name">Help & Support</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Help & Support</a></li>
+          </ul>
+        </li>
+
+
+
+     
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <section class="home-section">
+      <div class="home-content">
+
+
+
+       
+        
+
+    
+<div class="container-fluid">
+
+  <div class="row">
+        
+        
+    <div class="col-lg-3 col-6"> <i class='bx bx-menu'></i>
+      <span class="text"></span>
+    
+    
+      
+    
+    
+    </div>
+   
+
+
+    <div class="col-lg-3 col-12"> 
+      
+      <form>
+        <div class="input-group" style="margin-top: 20px;">
+            <input type="search" class="form-control dropdown-toggle" placeholder="Search..." >
+            <i class="fa fa-search" aria-hidden="true" style="position: absolute; right: 10px;top: 10px;"></i>
+            <!-- <button class="input-group-text btn btn-primary" type="submit" fdprocessedid="aqlir6">Search</button> -->
+        </div>
+    </form>
+    
+    
+    </div>
+
+
+
+    <div class="col-lg-6 col-12">
+
+
+      <div class="col-12 d-flex justify-content-end align-items-center" style="padding-top: 15px;">
+        <div class="example-button-container" style="margin-right: 20px;">
+          <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+            <mat-icon>notification_important</mat-icon>
+          </button>
+
+
+ 
+
+
+        </div>
+
+        <span>
+
+          <nav>
+            <!-- <div class="menu-toggle"></div> -->
+            <div class="profile">
+              <div class="user">
+                <h3>Dr.Katherine </h3>
+                <p>Karth@gmail.com</p>
+              </div>
+              <div class="img-box">
+                <img src="https://i.postimg.cc/BvNYhMHS/user-img.jpg" alt="some user image">
+              </div>
+            </div>
+          
+          </nav>
+  
+        </span>
+
+      </div>
+
+
+   
+
+
+    </div>
+    
+    
+          </div>
+
+</div>
+
+       
+
+    
+        
+
+
+
+    
+
+
+
+      </div>
+
+      <div class="content-wrapper">
+
+        <div class="content-header">
+        
+        <div class="container-fluid">
+
+        
+
+
+          <router-outlet></router-outlet>
+
+
+<div *ngIf="display" class="Content">
+
+
+
+
+          <div class="mat-elevation-z8 table-responsive">
+            <div class="mat-elevation-z8 table-responsive example-table-container">
+              <table  mat-table [dataSource]="dataSource" >
+            
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                  <th mat-header-cell *matHeaderCellDef> # </th>
+                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+
+
+<!-- Name Column -->
+<ng-container matColumnDef="idsss">
+<th mat-header-cell *matHeaderCellDef> ID </th>
+<td mat-cell *matCellDef="let element"> {{element.idsss}} </td>
+</ng-container>
+
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+<!-- Name Column -->
+<ng-container matColumnDef="gender">
+<th mat-header-cell *matHeaderCellDef> Gender </th>
+<td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+</ng-container>
+
+
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                  <th mat-header-cell *matHeaderCellDef> Submited On </th>
+                  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="doctor">
+                  <th mat-header-cell *matHeaderCellDef> Submited To </th>
+                  <td mat-cell *matCellDef="let element"> {{element.doctor}} </td>
+                </ng-container>
+
+
+                   <!-- Symbol Column -->
+                   <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Contact </th>
+                    <td mat-cell *matCellDef="let element"> 
+
+
+                      <div class="example-button-container">
+                        <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon" style="margin-right: 10px;">
+                          <mat-icon>settings_phone</mat-icon>
+                        </button>
+
+                        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                          <mat-icon> email</mat-icon>
+                        </button>
+                      </div>
+                    </td>
+                  </ng-container>
+
+
+                     <!-- Symbol Column -->
+                <ng-container matColumnDef="contact">
+                  <th mat-header-cell *matHeaderCellDef> Status </th>
+                  <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+                </ng-container>
+        
+        
+                
+          
+           <!-- Symbol Column -->
+           <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let element">
+              <a (click)="toggle()" routerLink="edit"><i class="fa fa-pencil-square-o efu" aria-hidden="true" ></i></a>
+              <a (click)="toggle()" routerLink="view"> <i class="fa fa-eye efu1" aria-hidden="true" style="font-size: 23px;"></i></a>
+              <a href="#"> <i class="fa fa-trash-o efu2" aria-hidden="true" style="font-size: 23px;"></i></a>           
+              </td>
+          </ng-container>
+          
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+          
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+              showFirstLastButtons aria-label="Select page of periodic elements">
+          </mat-paginator>
+          
+            </div>
+        
+          </div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+        </div>
+        
+            </div>
+
+    </section>
+
+
+  
+
+
+    
+
+
+</div>
+  

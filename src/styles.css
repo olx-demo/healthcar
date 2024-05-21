@@ -1,0 +1,561 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #e2e7fb !important;}
+
+
+
+
+
+
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  /* padding-top: 30px; */
+}
+
+
+
+
+.page-title-box .page-title-right {
+  float: right;
+  margin-top: 20px;
+}
+
+
+.page-title-box .page-title {
+  font-size: 20px;
+  margin: 0;
+  line-height: 75px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  color: #3f51b5;
+}
+
+
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+  display: flex;
+  min-height: 100%;
+}
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  min-height: 100vh;
+  width: 260px;
+  background-color: #373C9E;
+  background-size: cover;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+.sidebar.close{
+  width: 60px;
+}
+.sidebar .logo-details{
+  height: 85px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background:#000682;
+}
+.sidebar .logo-details i{
+  font-size: 30px;
+  color: #fff;
+  height: 50px;
+  min-width: 60px;
+  text-align: center;
+  line-height: 50px;
+}
+.sidebar .logo-details .logo_name{
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+}
+.sidebar.close .logo-details .logo_name{
+  transition-delay: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links{
+  height: 100%;
+  padding: 30px 0 100px 0;
+  overflow: auto;
+}
+.sidebar.close .nav-links{
+  overflow: visible;
+}
+.sidebar .nav-links::-webkit-scrollbar{
+  display: none;
+}
+.sidebar .nav-links li{
+  position: relative;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li:hover{
+  background: #45A0F4;
+}
+.sidebar .nav-links li .icon-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar.close .nav-links li .icon-link{
+  display: block
+}
+.sidebar .nav-links li i{
+  height: 50px;
+  min-width: 60px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sidebar .nav-links li.showMenu i.arrow{
+  transform: rotate(-180deg);
+}
+.sidebar.close .nav-links i.arrow{
+  display: none;
+}
+.sidebar .nav-links li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.sidebar .nav-links li a .link_name{
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+.sidebar.close .nav-links li a .link_name{
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links li .sub-menu{
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #45A0F4;
+  display: none;
+}
+.sidebar .nav-links li.showMenu .sub-menu{
+  display: block;
+}
+.sidebar .nav-links li .sub-menu a{
+  color: #fff;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.sidebar .nav-links li .sub-menu a:hover{
+  opacity: 1;
+}
+.sidebar.close .nav-links li .sub-menu{
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar.close .nav-links li:hover .sub-menu{
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li .sub-menu .link_name{
+  display: none;
+}
+.sidebar.close .nav-links li .sub-menu .link_name{
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+.sidebar .nav-links li .sub-menu.blank{
+  opacity: 1;
+  pointer-events: auto;
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links li:hover .sub-menu.blank{
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar .profile-details{
+  position: fixed;
+  bottom: 0;
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1d1b31;
+  padding: 12px 0;
+  transition: all 0.5s ease;
+}
+.sidebar.close .profile-details{
+  background: none;
+}
+.sidebar.close .profile-details{
+  width: 60px;
+}
+.sidebar .profile-details .profile-content{
+  display: flex;
+  align-items: center;
+}
+.sidebar .profile-details img{
+  height: 52px;
+  width: 52px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0 14px 0 12px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+}
+.sidebar.close .profile-details img{
+  padding: 10px;
+}
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details .job{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.sidebar.close .profile-details i,
+.sidebar.close .profile-details .profile_name,
+.sidebar.close .profile-details .job{
+  display: none;
+}
+.sidebar .profile-details .job{
+  font-size: 12px;
+}
+.home-section{
+  position: relative;
+  background: #E4E9F7;
+  min-height: 100%;
+  left: 0px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+}
+.sidebar.close ~ .home-section{
+  left: 0px;
+  width: calc(100% - 60px);
+}
+.home-section .home-content{
+
+  height:auto;
+  /* height: 75px;
+  display: flex; */
+  align-items: center;
+  background:#fff;
+  padding-bottom: 5px;
+  box-shadow: 0px 4px 40px rgb(0 0 0 / 10%);
+}
+.home-section .home-content .bx-menu,
+.home-section .home-content .text{
+  color: #11101d;
+  font-size: 35px;
+}
+.home-section .home-content .bx-menu{
+  margin: 18px 15px;
+  cursor: pointer;
+}
+.home-section .home-content .text{
+  font-size: 26px;
+  font-weight: 600;
+}
+@media (max-width: 400px) {
+
+  .sidebar.close.small-screen{
+    width: 0;
+  }
+
+  .sidebar.close.small-screen ~ .home-section{
+    width: 100%;
+    left: 0;
+    z-index: 100;
+  }
+}
+
+
+
+
+.efu{font-size: 23px !important;color: #006ACC;
+  margin-right: 5px;}
+
+  .efu1{font-size: 23px !important;color: #00AE7A;
+    margin-right: 5px;}
+
+    .efu2{font-size: 23px !important;color: #FF0000;
+      margin-right: 5px;}
+
+
+
+/* profile menu */
+
+.profile {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-align: end;
+}
+
+.profile h3 {
+  text-align: end;
+  line-height: 1;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.profile p {
+  line-height: 1;
+  font-size: 14px;
+  opacity: .6;
+}
+
+.profile .img-box {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+* --- User Select Disable --- */
+.LogoBox, .SideBar, .Header{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+th.mat-header-cell {
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    color: #3a3a3a;
+}
+
+
+.it-se{
+
+    padding-right: 5px;
+}
+
+
+.h3cl{
+
+    color: #373c9e;
+}
+
+
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+ 
+    background: white;
+}
+
+
+.example-button-row .mat-button-base {
+    margin: 0px 8px 8px 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- Header --- */
+.LogoBox{
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 250px;
+    background-color: #02126a;
+    
+}
+.Logo {
+    position: relative;
+  	margin: 12px 18px;
+    width: 250px;
+    height: 104px;
+    background-color: #02126a;
+    border-radius: 20px 20px 80px 80px;
+    display: inline-block;
+  cursor:pointer;
+}
+.Logo:before, .Logo:after {
+    position: absolute;
+    margin-top: 44px;
+    content:"";
+    left: 56px;
+    top: 0;
+    width: 50px;
+    height: 70px;
+    background: #02126a;
+    border-radius: 50px 50px 8px 8px;
+    -webkit-transform: rotate(-54deg);
+    -moz-transform: rotate(-54deg);
+    -ms-transform: rotate(-54deg);
+    -o-transform: rotate(-54deg);
+    transform: rotate(-58deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+.Logo:after {
+    background-color: #02126a;
+    left: 5px;
+    -webkit-transform: rotate(54deg);
+    -moz-transform: rotate(54deg);
+    -ms-transform: rotate(54deg);
+    -o-transform: rotate(54deg);
+    transform: rotate(58deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin :100% 100%;
+}
+.Logo:hover, .Logo:hover:before, .Logo:hover:after{
+  background-color: #ff5050;
+}
+.LogoText{
+	position: absolute;
+  top: 20px; left: 28px;
+  font: 27px 'Jura', sans-serif;
+  color: #fff;
+  cursor: pointer
+}
+
+/* --- Header --- */
+.Header{
+	position: absolute;
+  top: 0; left: 140px; right: 0;
+  height: 70px;
+  background-color: #fff;
+  box-shadow: 0px 4px 40px rgb(0 0 0 / 10%);
+}
+.HeadBar{
+  float: right;
+  padding: 5px;
+  padding-top: 17px;
+}
+.Top{
+  display: inline-block;
+  font: 14px sans-serif;
+  color: #fff;
+}
+
+/* --- SIDEBAR --- */
+.SideBar{
+  position: absolute;
+  top: 0; bottom: 0; left: 0;  
+  width: 250px;
+  padding-top: 80px;
+  background-color: #373c9e;
+}
+.Nav{
+  color: #fff;
+  font: 19px 'Jura', sans-serif;
+  padding: 16px 25px;
+}
+.Nav:hover{
+  background-color: #45a0f4;
+  cursor: pointer;
+}
+
+/* --- CONTENT --- */
+.Content{
+	/* position: absolute; */
+  top: 90px; bottom: 30px; left: 20px; right: 30px;
+  padding: 10px 15px;
+}
+
+
+
+h3{
+	margin: 0 0 30px;
+  font: 42px sans-serif;
+  color: #ff4044;
+}
+p{
+  font: 15px sans-serif;
+  line-height: 20px;
+  margin: 0 0 24px;
+  color: #222;
+}
+
+/* --- BUTTONS --- */
+.btn{	
+  background-color: #fff;
+  color: #ccc;
+  font: 600 16px 'Jura', sans-serif;
+  border-radius: 1px;
+  text-align: center;
+  height: 30px; line-height: 30px;
+  width: 120px;
+}
+.btn:hover{
+	color: #ff4044;
+  cursor: pointer;
+}
+
